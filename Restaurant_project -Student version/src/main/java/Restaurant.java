@@ -76,6 +76,8 @@ public class Restaurant {
     public Double getTotalOrderValue(List<Item> selectedItems) {  // getTotalOrderValue: method with just arguments and a dummy return value, to be implemented correctly later.
 
         double price = 0;
+        for(int i = 0 ; i < selectedItems.size() ; i++)
+            price += findItemByName(selectedItems.get(i).getName()).getPrice();
         return price;
     }
 
