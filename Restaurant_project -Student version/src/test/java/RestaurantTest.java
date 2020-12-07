@@ -99,4 +99,25 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE OF SELECTED ITEMS FROM MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void selected_items_from_a_particular_restaurant_must_return_the_total_order_amount()
+    {
+
+        Item firstSelectedItem = new Item("Sweet corn soup",119);          //creating item objects with items already present in setup
+        Item secondSelectedItem = new Item("Vegetable lasagne", 269);
+        List<Item> selectedItems = new ArrayList<>();
+        selectedItems.add(firstSelectedItem);
+        selectedItems.add(secondSelectedItem);
+        double expectedOrderValue = firstSelectedItem.getPrice() + secondSelectedItem.getPrice();
+
+        double calculatedOrderValue = restaurant.getTotalOrderValue(selectedItems);  // getTotalOrderValue: method with just definition and a dummy return value.
+
+        assertEquals(expectedOrderValue, calculatedOrderValue);  // getTotalOrderValue: method to be implemented correctly later.
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER VALUE OF SELECTED ITEMS FROM MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }

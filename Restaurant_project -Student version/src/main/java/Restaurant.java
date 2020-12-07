@@ -72,4 +72,11 @@ public class Restaurant {
         return name;
     }
 
+    //This method will implement Order Value feature, for selected items from menu by user, this method will calculate and return the total order value.
+    public Double getTotalOrderValue(List<Item> selectedItems) {  // getTotalOrderValue: method with just arguments and a dummy return value, to be implemented correctly later.
+
+        double price = 0;
+        return price;
+    }
+
 }
